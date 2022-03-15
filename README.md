@@ -50,7 +50,7 @@ require(['GamefaceArabicRtl'], (GamefaceArabicRtl) => {
 ```
 
 ### Known issues
-Since Coherent Gameface does not support OpenType GSUB Table, the required glyphs must be present in the font. For example:
+Since Coherent Gameface does not support OpenType [GSUB](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) Table lookup, the required glyphs must be present in the font. For example:
 ```
 String.codePointAt('ﺖ'); // must NOT return undefined
 ```
