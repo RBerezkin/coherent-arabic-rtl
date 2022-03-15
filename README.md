@@ -1,8 +1,10 @@
 # gameface-arabic-rtl
 This is a helper function for Arabic language support in Coherent Gameface. Since it [does not support](https://coherent-labs.com/Documentation/cpp-gameface/d3/d46/complex-text-layout.html) Arabic out of the box at the moment.
 
-###### Example
+### Example
+###### Without gameface-arabic-rtl
 ![Without gameface-arabic-rtl](/examples/example_wrong.png)
+###### With gameface-arabic-rtl
 ![With gameface-arabic-rtl](/examples/example_right.png)
 
 
