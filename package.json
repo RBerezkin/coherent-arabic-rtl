@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Library for Arabic language support in Coherent Gameface",
   "homepage": "https://github.com/RBerezkin/coherent-arabic-rtl",
-  "main": "index.js",
+  "main": "dist/gameface-arabic-rtl.min.js",
+  "module": "index.js",
+  "es6": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js"
   },

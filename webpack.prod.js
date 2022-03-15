@@ -6,6 +6,7 @@ module.exports = {
 
     output: {
         clean: true,
+        globalObject: 'this',
 
         path: path.resolve(__dirname, "dist"),
         filename: "gameface-arabic-rtl.min.js",
