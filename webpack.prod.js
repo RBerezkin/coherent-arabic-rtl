@@ -13,6 +13,7 @@ module.exports = {
         library: {
             type: "umd",
             name: "GamefaceArabicRtl",
+            umdNamedDefine: true,
         },
     },
 };
