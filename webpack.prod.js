@@ -8,7 +8,7 @@ module.exports = {
         clean: true,
 
         path: path.resolve(__dirname, "dist"),
-        filename: "gamefaceArabicRtl.min.js",
+        filename: "gameface-arabic-rtl.min.js",
         
         library: {
             type: "umd",
