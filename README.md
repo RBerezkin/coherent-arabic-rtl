@@ -1,12 +1,16 @@
 # gameface-arabic-rtl
 This is a helper function for Arabic language support in [Coherent Gameface](https://coherent-labs.com/products/coherent-gameface/). Since it [does not support](https://coherent-labs.com/Documentation/cpp-gameface/d3/d46/complex-text-layout.html) Arabic out of the box at the moment.
 
+### Installation
+```
+npm i gameface-arabic-rtl
+```
+
 ### Example
 ###### Without gameface-arabic-rtl
 ![Without gameface-arabic-rtl](/examples/example_wrong.png)
 ###### With gameface-arabic-rtl
 ![With gameface-arabic-rtl](/examples/example_right.png)
-
 
 ### Dependencies
 _[unicode-bidirectional](https://github.com/bbc/unicode-bidirectional)_ - A Javascript implementation of the [Unicode 9.0.0 Bidirectional Algorithm](http://www.unicode.org/reports/tr9/) from BBC.
