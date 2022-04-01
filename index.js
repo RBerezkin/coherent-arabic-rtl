@@ -3,6 +3,9 @@ import { resolve, reorder } from 'unicode-bidirectional';
 const punctuation = ".;:,!?";
 const punctuationReplacements = ".؟!،:؛";
 
+const numbers = "0123456789";
+const numbersReplacements = "٠١٢٣٤٥٦٧٨٩";
+
 const arabicLetters = "آأإابتثجحخدذرزسشصضطظعغفقكلمنهويةؤئىپچژڤگٹہےیڈڑۇۆۈک";
 const replacements = [
     { isolated: "ﺁ", start: "ﺁ", middle: "ﺂ", end: "ﺂ" },
@@ -71,6 +74,10 @@ function convertPunctuation(char) {
     return punctuationReplacements[punctuation.indexOf(char)];
 }
 
+function convertNumber(char) {
+    return numbersReplacements[numbers.indexOf(char)];
+}
+
 function convertWord(word) {
     const letters = word.split("");
     let finalWord = "";
@@ -82,12 +89,21 @@ function convertWord(word) {
         const replacement = replacements[arabicLetters.indexOf(char)];
 
         if (!replacement) {
+            // maybe this char is punctuation?
             const punctuationReplacement = convertPunctuation(char);
 
             if (punctuationReplacement) {
                 finalWord += punctuationReplacement;
             } else {
-                finalWord += char;
+                // maybe this is number?
+                const numberReplacement = convertNumber(char);
+
+                if (numberReplacement) {
+                    finalWord += numberReplacement;
+                } else {
+                    // ok, just insert it as is
+                    finalWord += char;
+                }
             }
             
             continue;
