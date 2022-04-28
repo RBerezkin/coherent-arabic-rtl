@@ -4,6 +4,10 @@ module.exports = {
     mode: "production",
     entry: path.resolve(__dirname, "index.js"),
 
+    optimization: {
+        minimize: true
+    },
+
     output: {
         clean: true,
         globalObject: 'this',
@@ -17,4 +21,18 @@ module.exports = {
             umdNamedDefine: true,
         },
     },
+
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                },
+            },
+        ]
+    }
 };

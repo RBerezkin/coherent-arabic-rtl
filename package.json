@@ -1,6 +1,6 @@
 {
   "name": "gameface-arabic-rtl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Library for Arabic language support in Coherent Gameface",
   "homepage": "https://github.com/RBerezkin/coherent-arabic-rtl",
   "main": "dist/gameface-arabic-rtl.min.js",
@@ -20,11 +20,11 @@
   ],
   "author": "Berezkin Rashid",
   "license": "MIT",
-  "dependencies": {
-    "unicode-bidirectional": "^2.0.5"
-  },
   "devDependencies": {
-    "webpack": "^5.70.0",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   }
 }

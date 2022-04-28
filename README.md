@@ -13,9 +13,7 @@ npm i gameface-arabic-rtl
 ![With gameface-arabic-rtl](/examples/example_right.png)
 
 ### Dependencies
-_[unicode-bidirectional](https://github.com/bbc/unicode-bidirectional)_ - A Javascript implementation of the [Unicode 9.0.0 Bidirectional Algorithm](http://www.unicode.org/reports/tr9/) from BBC.
-
-Also my code is based on [Abdulla Saeed's code](https://github.com/6f5/rtl-arabic). I express my deep gratitude to him.
+I use [Abdulla Saeed's code](https://github.com/6f5/rtl-arabic). But had to manually rewrite it for ES5 due to the fact that on some platforms for the babel-loader, conversion to ES5 for node_modules is disabled.
 
 ### Usage
 _gameface-arabic-rtl_ is declared as a [Universal Module](https://github.com/umdjs/umd) (UMD), meaning it can be used with all conventional Javascript module systems:
