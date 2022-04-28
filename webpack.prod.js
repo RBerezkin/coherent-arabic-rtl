@@ -20,19 +20,5 @@ module.exports = {
             name: "GamefaceArabicRtl",
             umdNamedDefine: true,
         },
-    },
-
-    module: {
-        rules: [
-            {
-                test: /\.m?js$/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                },
-            },
-        ]
     }
 };
