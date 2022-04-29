@@ -23,7 +23,8 @@ _gameface-arabic-rtl_ is declared as a [Universal Module](https://github.com/umd
 import { process } from 'gameface-arabic-rtl';
 
 const text = 'مرحبا بالعالم';
-const convertedText = process(text, true);
+const translateNumbers = true;
+const convertedText = process(text, translateNumbers);
 ```
 
 ###### CommonJS
@@ -31,14 +32,16 @@ const convertedText = process(text, true);
 const GamefaceArabicRtl = require('gameface-arabic-rtl/dist/gameface-arabic-rtl.min.js');
 
 const text = 'مرحبا بالعالم';
-const convertedText = GamefaceArabicRtl.process(text, true);
+const translateNumbers = true;
+const convertedText = process(text, translateNumbers);
 ```
 
 ###### RequireJS
 ```
 require(['GamefaceArabicRtl'], (GamefaceArabicRtl) => {
     const text = 'مرحبا بالعالم';
-    const convertedText = GamefaceArabicRtl.process(text, true);
+    const translateNumbers = true;
+    const convertedText = process(text, translateNumbers);
 });
 ```
 
@@ -47,7 +50,8 @@ require(['GamefaceArabicRtl'], (GamefaceArabicRtl) => {
 <script src="gameface-arabic-rtl.min.js"></script>
 <script>
     const text = 'مرحبا بالعالم';
-    const convertedText = GamefaceArabicRtl.process(text, true);
+    const translateNumbers = true;
+    const convertedText = process(text, translateNumbers);
 </script>
 ```
 
