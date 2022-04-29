@@ -23,7 +23,7 @@ _gameface-arabic-rtl_ is declared as a [Universal Module](https://github.com/umd
 import { process } from 'gameface-arabic-rtl';
 
 const text = 'مرحبا بالعالم';
-const convertedText = process(text);
+const convertedText = process(text, true);
 ```
 
 ###### CommonJS
@@ -31,14 +31,14 @@ const convertedText = process(text);
 const GamefaceArabicRtl = require('gameface-arabic-rtl/dist/gameface-arabic-rtl.min.js');
 
 const text = 'مرحبا بالعالم';
-const convertedText = GamefaceArabicRtl.process(text);
+const convertedText = GamefaceArabicRtl.process(text, true);
 ```
 
 ###### RequireJS
 ```
 require(['GamefaceArabicRtl'], (GamefaceArabicRtl) => {
     const text = 'مرحبا بالعالم';
-    const convertedText = GamefaceArabicRtl.process(text);
+    const convertedText = GamefaceArabicRtl.process(text, true);
 });
 ```
 
@@ -47,13 +47,13 @@ require(['GamefaceArabicRtl'], (GamefaceArabicRtl) => {
 <script src="gameface-arabic-rtl.min.js"></script>
 <script>
     const text = 'مرحبا بالعالم';
-    const convertedText = GamefaceArabicRtl.process(text);
+    const convertedText = GamefaceArabicRtl.process(text, true);
 </script>
 ```
 
 ### Known issues
 Since Coherent Gameface does not support OpenType [GSUB](https://docs.microsoft.com/en-us/typography/opentype/spec/gsub) Table lookup, the required glyphs must be present in the font. For example:
 ```
-String.codePointAt('ﺖ'); // must NOT return undefined
+'ﺖ'.codePointAt(0); // must NOT return undefined
 ```
 Script was tested on __Tahoma__ font.
