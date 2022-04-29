@@ -5,7 +5,7 @@ function process(sentence, translateNumbers) {
 
     if (typeof translateNumbers === "boolean" && translateNumbers === true) {
         num = true;
-    } else {
+    } else if (typeof translateNumbers !== "undefined") {
         throw new Error("[GamefaceArabicRtl] Second parameter must be boolean");
     }
 
