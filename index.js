@@ -1,17 +1,9 @@
 import RTLArabic from "./src/RTLArabic";
 
-function process(sentence, translateNumbers) {
-    let num = false;
-
-    if (typeof translateNumbers === "boolean" && translateNumbers === true) {
-        num = true;
-    } else if (typeof translateNumbers !== "undefined") {
-        throw new Error("[GamefaceArabicRtl] Second parameter must be boolean");
-    }
-
+function process(sentence) {
     const options = {
         harakat: true,
-        numbers: num,
+        numbers: false,
     };
 
     return new RTLArabic(sentence, options).convert();

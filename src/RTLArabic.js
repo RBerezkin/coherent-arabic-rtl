@@ -162,7 +162,7 @@ class RTLArabic extends String {
         } else if (char.isBracket()) {
             this.addChar(char.toBracket());
         } else if (char == "ء") {
-            this.addChar("ﺀ");
+            this.addChar(String.fromCodePoint(1569));
         } else if (char == "آ") {
             //dealing with letters, output each letter with its right position
             this.addChar(this.getChar("alfmd"));
@@ -294,7 +294,12 @@ class RTLArabic extends String {
 
             this.pos = CURRENT_CHAR.getPos(charBefore, charAfter);
             
+            console.log(CURRENT_CHAR, CURRENT_CHAR.codePointAt(0));
+
             i = this.runTests(CURRENT_CHAR, i);
+
+            console.log(i);
+            console.log("------");
         }
 
         return this.convertedStr;
