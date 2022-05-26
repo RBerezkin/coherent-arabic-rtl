@@ -107,19 +107,18 @@ class RTLArabic extends String {
         }
 
         return [before, after];
-        }
+    }
 
-        addEngChar(index) {
+    addEngChar(index) {
         // Add english letters, numbers, and symbols as is
         while (RTLArabic.arabic.indexOf(this.chars[index]) < 0 && RTLArabic.unicode.indexOf(this.chars[index]) < 0 && this.chars[index] !== undefined) {
             this.engStr += this.chars[index];
             index++;
 
             if (this.chars[index] == "\n") {
-            break;
+                break;
             }
         } // Add spaces
-
 
         let engChars = this.engStr.split("");
         let lastCharPos = engChars.length - 1;
@@ -129,11 +128,10 @@ class RTLArabic extends String {
             this.engStr = " " + engChars[0];
         } else {
             while (engChars[lastCharPos] === " ") {
-            this.engStr = " " + this.engStr.substring(0, this.engStr.length - 1);
-            lastCharPos -= 1;
+                this.engStr = " " + this.engStr.substring(0, this.engStr.length - 1);
+                lastCharPos -= 1;
             }
         } // Put together the arabic and english text
-
 
         this.convertedStr = this.engStr + this.convertedStr;
         this.engStr = ""; // set the loop pointer to the first char after the english text.
@@ -293,13 +291,8 @@ class RTLArabic extends String {
             charAfter = charAfter != "undefined" ? charAfter : null;
 
             this.pos = CURRENT_CHAR.getPos(charBefore, charAfter);
-            
-            console.log(CURRENT_CHAR, CURRENT_CHAR.codePointAt(0));
 
             i = this.runTests(CURRENT_CHAR, i);
-
-            console.log(i);
-            console.log("------");
         }
 
         return this.convertedStr;
