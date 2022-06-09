@@ -62,7 +62,7 @@ class RTLChar extends String {
     }
 
     toBracket() {
-        let bracketIndex = RTLChar.brackets.indexOf(char);
+        let bracketIndex = RTLChar.brackets.indexOf(this);
 
         if (bracketIndex >= 0) {
             if (bracketIndex % 2 == 0) {
